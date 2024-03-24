@@ -8,7 +8,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:cardElevation="10dp"
         app:cardCornerRadius="10dp"
@@ -49,8 +49,40 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="@string/dinoDesc"/>
+                <TextView
+                    android:id="@+id/dinoPeriod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/dinoPeriod"/>
 
+                <TextView
+                    android:id="@+id/dinoPhysicalCharacteristics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/dinoPhysicalCharacteristics"/>
 
+                <TextView
+                    android:id="@+id/dinoHabitat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/dinoHabitat"/>
+
+                <TextView
+                    android:id="@+id/dinoBehavior"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/dinoBehavior"/>
+
+                <TextView
+                    android:id="@+id/dinoClassification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/dinoClassification"/>
 
             </LinearLayout>
         </LinearLayout>

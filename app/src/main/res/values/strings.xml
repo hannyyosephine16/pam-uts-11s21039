@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Dino Pedia</string>
     <string name="dinoDesc">Description Detail</string>
+    <string name="dinoPeriod">Periode Dino</string>
+    <string name="dinoPhysicalCharacteristics">Karakter Fisik</string>
+    <string name="dinoHabitat">Habitat</string>
+    <string name="dinoBehavior">Behavior</string>
+    <string name="dinoClassification">Klasifikasi</string>
     <!-- Dino Families Name-->
     <string name="sauropoda_name">Sauropoda Families</string>
 

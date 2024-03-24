@@ -1,13 +1,14 @@
 package com.ifs21039.dinopedia
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+//import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MyDinoAdapter.OnItemClickListener {
 
-    // Define myDinoData array as a property of the MainActivity class
     private val myDinoData = arrayOf(
         MyDinoData(
             "Dromaeosauridae",
@@ -79,8 +80,25 @@ class MainActivity : AppCompatActivity() {
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Use the myDinoData property directly within onCreate function
         val myDinoAdapter = MyDinoAdapter(myDinoData, this@MainActivity)
         recyclerView.adapter = myDinoAdapter
+
+        myDinoAdapter.setOnItemClickListener(this)
+    }
+
+    override fun onItemClick(position: Int) {
+        val clickedDino = myDinoData[position]
+        val intent = Intent(this, DinoDetailActivity::class.java)
+        intent.putExtra("dinoPeriod", clickedDino.dinoPeriod)
+        intent.putExtra("dinoHabitat", clickedDino.dinoHabitat)
+        intent.putExtra("dinoPhysicalCharacteristics", clickedDino.dinoPhysicalCharacteristics)
+        intent.putExtra("dinoBehavior", clickedDino.dinoBehavior)
+        intent.putExtra("dinoClassification", clickedDino.dinoClassification)
+        startActivity(intent)
+    }
+
+    fun openAboutActivity() {
+        val intent = Intent(this, AboutActivity::class.java)
+        startActivity(intent)
     }
 }
